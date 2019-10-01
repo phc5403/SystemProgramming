@@ -12,7 +12,7 @@ int main(void) {
 	char a[10];     // 입력할 파일명
 	char ch;        // 글자
 
-	/*
+	
 	printf("파일 이름 : ");
 	gets(a);
 
@@ -22,13 +22,15 @@ int main(void) {
 		fprintf(stderr, "파일 열기 오류\n");
 		exit(1);
 	}
-	*/
+	
 
+	/*
 	fp = fopen("test.txt", "rt");
 	if (fp == NULL) {
 		printf("파일 열기 오류\n");
 		return 1;
 	}
+	*/
 	
 
 	printf("파일의 내용 출력..\n");
@@ -73,7 +75,8 @@ int main(void) {
 	}
 	fclose(fp);
 
-	line++;
+	//line++;
+	line = line - 1;
 	
 	printf("\n\n 글자 >> %d, 단어 : %d개, 라인 : %d줄 \n\n", letter, word, line);
 
