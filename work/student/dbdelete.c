@@ -30,9 +30,10 @@ int main(int argc, char *argv[])
 			lseek(fd, (long) (id-START_ID) * sizeof(rec), SEEK_SET);
 			if( (read(fd, &rec, sizeof(rec)) > 0) && (rec.id != 0))
 			{
-				rec.score = d_num;
+				rec.id = d_num;
 				lseek(fd, (long) - sizeof(rec), SEEK_CUR);
 				write(fd, &rec, sizeof(rec));
+				printf("삭제 완료\n");
 			}
 			else printf("레코드 %d 없음 \n", id);
 		}
