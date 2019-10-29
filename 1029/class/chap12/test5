@@ -1,0 +1,9 @@
+#!/bin/bash
+# reading values from a file
+
+file="/home/phc/sp/1029/class/chap12/states"
+
+for state in 'cat $file'
+do
+    echo "Visit beautiful $state"
+done
